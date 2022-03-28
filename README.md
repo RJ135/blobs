@@ -1,0 +1,3 @@
+# blobs
+I always wanted to create something "fluid blobbish", so ...
+![the_blob](https://user-images.githubusercontent.com/48568104/160453860-9a594631-4426-411b-a704-65efc94e9c65.png)
