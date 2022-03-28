@@ -1,0 +1,116 @@
+/* Resets */
+@import "resets/normalize";
+@import "resets/reset.local";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap");
+
+$mobile: "(max-width : 375px)";
+$tablet: "(min-width : 376px) and (max-width : 768px)";
+$desktop: "(min-width : 768px)";
+$font_size: 10px;
+html,
+body {
+   height: 100%;
+}
+html {
+   font-size: $font_size;
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #ffffff;
+   font-family: "Josefin Sans";
+   overflow: hidden;
+}
+
+h1 {
+   font-size: 3.2rem;
+   z-index: 1;
+}
+
+p,
+input,
+a {
+   font-weight: 400;
+   font-size: 1.8rem;
+   line-height: 140%;
+   z-index: 1;
+}
+span {
+   font-weight: 500;
+   color: black;
+}
+p {
+   color: rgba(0, 0, 0, 0.582);
+   font-weight: lighter;
+}
+@keyframes rotate {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+.wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-color: #ffffff;
+   filter: blur(4px) contrast(200);
+   // transform: scale(1.5);
+   .box {
+      position: absolute;
+      height: 500px;
+      width: 500px;
+
+      .circle {
+         height: 2.4rem;
+         width: 2rem;
+         border-radius: 100px;
+         transition: all 2s cubic-bezier(0.311, 0.441, 0.444, 1.649);
+         position: absolute;
+         background-color: rgb(0, 0, 0);
+         animation: rotate 0.8s infinite linear reverse;
+      }
+      &:nth-child(2) {
+         animation: rotate 60s infinite linear;
+
+         .circle {
+            height: 2.2rem;
+            width: 2rem;
+            animation: rotate 1s infinite linear reverse;
+         }
+      }
+      &:nth-child(3) {
+         animation: rotate 60s infinite linear reverse;
+
+         .circle {
+            height: 3.2rem;
+            width: 3rem;
+            animation: rotate 0.7s infinite linear;
+         }
+      }
+      &:nth-child(4) {
+         animation: rotate 60s infinite linear reverse;
+
+         .circle {
+            height: 5.2rem;
+            width: 5rem;
+            animation: rotate 0.6s infinite linear reverse;
+         }
+      }
+      &:nth-child(5) {
+         animation: rotate 60s infinite linear;
+
+         .circle {
+            height: 1rem;
+            width: 1.2rem;
+            animation: rotate 0.8s infinite linear;
+         }
+      }
+   }
+}
